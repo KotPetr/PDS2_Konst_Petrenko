@@ -16,3 +16,8 @@ def count_negative(sequense):
     return len([x for x in sequense if x < 0])
 
 print(count_negative((3, 8, 3, 0, -5, 2)))
+
+def max_of_two(a, b):
+    return a if a > b else b
+
+print(max_of_two(8, 8))
