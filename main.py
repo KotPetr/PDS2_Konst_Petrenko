@@ -21,11 +21,13 @@ def count_negative(sequense):
 
 print(count_negative((3, 8, 3, 0, -5, 2)))
 
+# This is "master" branch code
 def max_of_two(a, b):
     return a if a > b else b
 
 print(max_of_two(8, 8))
 
+# This is "test" branch code
 tup = (2, 3, 7, 8)
 print(tup)
 
