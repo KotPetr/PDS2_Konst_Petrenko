@@ -1,5 +1,5 @@
 # 1st commit
-a = 5
-print(a)
-a = 45 -37
-print(a)
+def max_of_two(a, b):
+    return a if a > b else b
+
+print(max_of_two(8, 7))
