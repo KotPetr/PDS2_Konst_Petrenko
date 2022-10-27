@@ -16,3 +16,8 @@ def print_message(string : str):
     print(string)
 
 print_message('Hello GitHub!')
+
+def count_negative(sequense):
+    return len([x for x in sequense if x < 0])
+
+print(count_negative((3, 8, -5, 0, -2, 2)))
