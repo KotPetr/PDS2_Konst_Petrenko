@@ -11,3 +11,8 @@ def max_of_sequence(seq):
     return max_elem
 
 print(max_of_sequence([7, 9 , -4]))
+
+def print_message(string : str):
+    print(string)
+
+print_message('Hello GitHub!')
