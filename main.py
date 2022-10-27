@@ -1,4 +1,6 @@
-# 1st commit
+print("Master commit")
+
+
 def max_of_two(a, b):
     return a if a > b else b
 
