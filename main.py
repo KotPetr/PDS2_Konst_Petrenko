@@ -19,3 +19,7 @@ print(count_negative((3, 8, 3, 0, -5, 2)))
 
 tup = (2, 3, 7, 8)
 print(tup)
+
+string = 'Hello Git!'
+print(string.upper())
+print(string)
