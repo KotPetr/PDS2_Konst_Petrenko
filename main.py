@@ -21,3 +21,10 @@ def max_of_two(a, b):
     return a if a > b else b
 
 print(max_of_two(8, 8))
+
+tup = (2, 3, 7, 8)
+print(tup)
+
+string = 'Hello Git!'
+print(string.upper())
+print(string)
