@@ -14,6 +14,16 @@ print('This is "master" branch!')
 print()
 print('This is local repository!')
 
+
 # 4th commit
 print()
 print('"Test" branch was created!')
+
+# 5th commit
+def test_function():
+    print("This function was wrote in 'Test' branch!")
+
+# 6th commit
+print()
+print('This is "test" branch!')
+
