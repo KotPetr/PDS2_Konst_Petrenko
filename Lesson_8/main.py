@@ -4,3 +4,6 @@
 
 def main_function():
     print('Hello Git!')
+
+print()
+print('This is "master" branch!')
