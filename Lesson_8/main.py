@@ -13,3 +13,7 @@ print('This is "master" branch!')
 # 3d commit
 print()
 print('This is local repository!')
+
+# 4th commit
+print()
+print('"Test" branch was created!')
