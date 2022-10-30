@@ -13,3 +13,6 @@ print('This is "master" branch!')
 # 3d commit
 print()
 print('This is local repository!')
+
+def test_function():
+    print("This function was wrote in 'Test' branch!")
