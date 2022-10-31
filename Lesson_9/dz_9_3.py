@@ -1,28 +1,27 @@
 
 class Parallelogram:
 
-    def __init__(self, length : float, width : float):
+    def __init__(self, length : float, width = 1.0):
         self.__length = length
         self.__width = width
 
     def get_area(self):
-        return self.__width * self.__length
+        return self.__length * self.__width
 
+    @property
+    def length(self):
+        return self.__length
 
 
 class Square(Parallelogram):
 
-    def __init__(self, length: float):
-        self.__length = length
-
-
     def get_area(self):
-        return self.__length **2
+        return super().length **2
 
 
 
-a = Parallelogram(2, 3)
+a = Parallelogram(3, 4)
 print(a.get_area())
 
-b = Square(4)
+b = Square(3)
 print(b.get_area())
