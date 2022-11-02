@@ -4,7 +4,6 @@ class TextProcessor:
     def __init__(self):
         self.__is_punct = False
 
-
     def is_punktiantian(self, char : str):
         punct = (',', '.', '!', ':', ';', '?', '-', '(', ')', '[', ']', '\"', '\\', '/')
         self.__is_punct = True if char in punct else False
@@ -22,8 +21,8 @@ class TextProcessor:
 
 class TextLoader:
 
-    def __init__(self):
-        self.__text_processor = tp
+    def __init__(self, text_processor : TextProcessor):
+        self.__text_processor = text_processor
         self.__clean_string = ''
 
     @property
@@ -41,8 +40,8 @@ class TextLoader:
 
 class DataInterface:
 
-    def __init__(self):
-        self._text_loader = tl
+    def __init__(self, text_loader : TextLoader):
+        self._text_loader = text_loader
 
     def process_texts(self, text):
         for row in text:
@@ -53,11 +52,11 @@ class DataInterface:
 tp = TextProcessor()
 print(tp.get_clean_string('Hel?lo, w:o]r/ld!'))
 
-tl = TextLoader()
+tl = TextLoader(tp)
 tl.set_clean_text('Hel?lo, w:o]r/ld!')
 print(tl.clean_string)
 
-dt = DataInterface()
+dt = DataInterface(tl)
 text = ['Hello!', '\Py_charm,', '?Hi-', 'Py.th:on']
 dt.process_texts(text)
 
