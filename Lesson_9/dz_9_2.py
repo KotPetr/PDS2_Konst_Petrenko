@@ -2,26 +2,28 @@
 class TextProcessor:
 
     def __init__(self):
-        self.__is_punctuation = False
+        self.__is_punct = False
 
 
     def is_punktiantian(self, char : str):
         punct = (',', '.', '!', ':', ';', '?', '-', '(', ')', '[', ']', '\"', '\\', '/')
-        return True if char in punct else False
+        self.__is_punct = True if char in punct else False
+
 
 #    @classmethod
     def get_clean_string(self, string):
         new_string = ''
         for char in string:
-            if not self.is_punktiantian(char):
+            self.is_punktiantian(char)
+            if not self.__is_punct:
                 new_string += char
         return new_string
 
 
 class TextLoader:
 
-    def __init__(self, text_processor : TextProcessor):
-        self.__text_processor = text_processor
+    def __init__(self):
+        self.__text_processor = tp
         self.__clean_string = ''
 
     @property
@@ -39,8 +41,8 @@ class TextLoader:
 
 class DataInterface:
 
-    def __init__(self, text_loader : TextLoader):
-        self._text_loader = text_loader
+    def __init__(self):
+        self._text_loader = tl
 
     def process_texts(self, text):
         for row in text:
@@ -51,11 +53,11 @@ class DataInterface:
 tp = TextProcessor()
 print(tp.get_clean_string('Hel?lo, w:o]r/ld!'))
 
-tl = TextLoader(tp)
+tl = TextLoader()
 tl.set_clean_text('Hel?lo, w:o]r/ld!')
 print(tl.clean_string)
 
-dt = DataInterface(tl)
+dt = DataInterface()
 text = ['Hello!', '\Py_charm,', '?Hi-', 'Py.th:on']
 dt.process_texts(text)
 
