@@ -2,22 +2,28 @@
 class TextProcessor:
 
     def __init__(self):
-        self.__is_punct = False
+        self.__punct = (',', '.', '!', ':', ';', '?', '-', '(', ')', '[', ']', '\"', '\\', '/', '*')
 
 
     def is_punktiantian(self, char : str):
-        punct = (',', '.', '!', ':', ';', '?', '-', '(', ')', '[', ']', '\"', '\\', '/')
-        self.__is_punct = True if char in punct else False
+        return char in self.__punct
 
 
-#    @classmethod
     def get_clean_string(self, string):
         new_string = ''
         for char in string:
-            self.is_punktiantian(char)
-            if not self.__is_punct:
+            if not self.is_punktiantian(char):
                 new_string += char
         return new_string
+
+
+#     def get_clean_string(self, string):
+#         new_string = ''
+#         for char in string:
+#             self.is_punktiantian(char)
+#             if not self.__is_punct:
+#                 new_string += char
+#         return new_string
 
 
 class TextLoader:
@@ -36,7 +42,6 @@ class TextLoader:
     def set_clean_text(self, string):
         self.__clean_string = self.__text_processor.get_clean_string(string)
         return
-
 
 
 class DataInterface:
