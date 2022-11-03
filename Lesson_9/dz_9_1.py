@@ -7,19 +7,19 @@ class Car:
         self.motor_volume = car_motor_volume
 
     def moove_forward(self):
-        print(f'{self.color.capitalize()} {self.name} mooving forward!')
+        print(f'{self.color.capitalize()} {self.name} is mooving forward!')
 
     def moove_backward(self):
-        print(f'{self.color.capitalize()} {self.name} mooving backward!')
+        print(f'{self.color.capitalize()} {self.name} is mooving backward!')
 
 
 class TurningCar(Car):
 
     def turn_right(self):
-        print(f'{self.color.capitalize()} {self.name} turning right!')
+        print(f'{self.color.capitalize()} {self.name} is turning right!')
 
     def turn_left(self):
-        print(f'{self.color.capitalize()} {self.name} turning left!')
+        print(f'{self.color.capitalize()} {self.name} is turning left!')
 
 car1 = Car('honda', 'red', 1.8)
 car2 = Car('audi', 'white', 2.2)

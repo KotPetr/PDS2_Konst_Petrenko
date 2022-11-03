@@ -4,6 +4,7 @@ class TextProcessor:
     def __init__(self):
         self.__is_punct = False
 
+
     def is_punktiantian(self, char : str):
         punct = (',', '.', '!', ':', ';', '?', '-', '(', ')', '[', ']', '\"', '\\', '/')
         self.__is_punct = True if char in punct else False
@@ -56,7 +57,7 @@ tl = TextLoader(tp)
 tl.set_clean_text('Hel?lo, w:o]r/ld!')
 print(tl.clean_string)
 
-dt = DataInterface(tl)
-text = ['Hello!', '\Py_charm,', '?Hi-', 'Py.th:on']
-dt.process_texts(text)
+di = DataInterface(tl)
+str_list = ['Hello!', '\Py_charm,', '?Hi-', 'Py.th:on']
+di.process_texts(str_list)
 
