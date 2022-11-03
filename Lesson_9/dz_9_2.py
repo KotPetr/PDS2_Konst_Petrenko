@@ -17,13 +17,6 @@ class TextProcessor:
         return new_string
 
 
-#     def get_clean_string(self, string):
-#         new_string = ''
-#         for char in string:
-#             self.is_punktiantian(char)
-#             if not self.__is_punct:
-#                 new_string += char
-#         return new_string
 
 
 class TextLoader:
