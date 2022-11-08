@@ -1,13 +1,11 @@
 import sys
 
 class NegativeArgs(Exception):
-
     def __init__(self, *args):
         if args:
             self._args = (args)
         else:
             self._args = None
-
     def __str__(self):
         return f"Some of arguments {self._args} are negative."
 

@@ -8,6 +8,9 @@ def month_name(month_num):
     except KeyError:
         print('Invalid month_name(num) argument. Int number in range from 1 to 12 expected.', file=sys.stderr)
         return 'Some month'
+    except Exception as ex:
+        print(str(ex).capitalize(), file=sys.stderr)
+        return 'Some month'
 
 
 print(month_name(4))
