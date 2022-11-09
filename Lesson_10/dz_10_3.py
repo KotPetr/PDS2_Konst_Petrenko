@@ -1,5 +1,6 @@
 import sys
 
+# Клас помилки, яка повідомляє про негативні або нульові значення довжини або ширини
 class NegativeArgs(Exception):
     def __init__(self, *args):
         if args:
@@ -13,6 +14,7 @@ class NegativeArgs(Exception):
 class Parallelogram:
 
     def __init__(self, length : float, width = 1.0):
+        # Якщо один з переданих параметрів менше або дорівнює 0 викликається помилка
         if length >= 0 and width >= 0:
             self.__length = length
             self.__width = width
