@@ -5,10 +5,11 @@ def is_unique_collection(ls):
         if min(isinstance(x, (int, float, complex)) for x in ls):
             return len(ls) == len(set(ls))
         else:
-            print('List contains non-numeric values.')
-            return
+            raise TypeError ('List contains non-numeric values.')
+
     except TypeError as ex:
         print(str(ex).capitalize(), file=sys.stderr)
+
     except Exception as ex:
         print(str(ex).capitalize(), file=sys.stderr)
 
