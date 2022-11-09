@@ -21,16 +21,23 @@ class Parallelogram:
         else:
             raise NegativeArgs(length, width)
 
+    @property
+    def length(self):
+        return self.__length
+    @property
+    def width(self):
+        return self.__width
+
     def get_area(self):
-        return self.__length * self.__width
+        return self.length * self.width
 
 
 
 try:
     a = Parallelogram(2, 5)
-    print(a.get_area())
+    print(f'Площа парлелограму з длинами сторін {a.length, a.width} дорівнює {a.get_area()}')
     b = Parallelogram(2, -5)
-    print(b.get_area())
+    print(f'Площа парлелограму з длинами сторін {b.length, b.width} дорівнює {b.get_area()}')
 
 except NegativeArgs as ex:
     print(ex, file=sys.stderr)
