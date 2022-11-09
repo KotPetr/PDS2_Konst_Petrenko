@@ -35,9 +35,9 @@ class Parallelogram:
 
 try:
     a = Parallelogram(2, 5)
-    print(f'Площа парлелограму з длинами сторін {a.length, a.width} дорівнює {a.get_area()}')
+    print(f'Площа прямокутника з длинами сторін {a.length, a.width} дорівнює {a.get_area()}')
     b = Parallelogram(2, -5)
-    print(f'Площа парлелограму з длинами сторін {b.length, b.width} дорівнює {b.get_area()}')
+    print(f'Площа прямокутника з длинами сторін {b.length, b.width} дорівнює {b.get_area()}')
 
 except NegativeArgs as ex:
     print(ex, file=sys.stderr)
