@@ -24,6 +24,7 @@ try:
                 print('Server: ',message)
                 client_socket.send(message.encode('utf-8'))
                 if data.lower() == 'пока':
+                    print('Connection terminated.')
                     break
 
 except KeyboardInterrupt:

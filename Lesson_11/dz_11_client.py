@@ -8,6 +8,9 @@ def messaging(client: socket.socket):
     client.send(message)
     data = client.recv(1024).decode('utf-8')
     print(f"Server: {str(data)}")
+    if str(data) == 'На все добре.':
+        quit(print('Server connection terminated.'))
+
 
 
 try:
