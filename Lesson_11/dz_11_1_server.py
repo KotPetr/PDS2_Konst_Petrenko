@@ -13,9 +13,14 @@ try:
             with client_socket:
                 data = client_socket.recv(1024).decode('utf-8')
                 print('Client: ', data)
-                message = input('Enter your message: ').encode('utf-8')
-                client_socket.send(message)
+                while True:
+                    message = input('Enter your message: ')
+                    if len(message) > 0:
+                        break
+                client_socket.send(message.encode('utf-8'))
 
 except KeyboardInterrupt:
     print('\nServer has been stoped.')
+except Exception as ex:
+    print(ex)
 

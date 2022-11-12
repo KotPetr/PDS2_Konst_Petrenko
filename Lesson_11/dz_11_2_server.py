@@ -6,7 +6,7 @@ PORT = 12001
 def chat_bot(mess, addr):
     mess = mess.lower().strip().replace('.', '')
     chat_bot_dict = {'привіт': 'Доброго дня.', 'як справи?': 'Відмінно!', 'твоя адреса?': f'IP aдреса, порт: {addr}', 'пока': 'На все добре.'}
-    phrases = "; ".join([str(x).capitalize() for x in chat_bot_dict.keys()]) + ' (перериває сеанс)'
+    phrases = "; ".join([str(x).capitalize() for x in chat_bot_dict.keys()])
     return chat_bot_dict.get(mess.lower()) if mess in chat_bot_dict.keys() \
         else 'Вибачте, я вас на зрозумів.\nСписок доступних фраз: ' + phrases
 
@@ -23,9 +23,7 @@ try:
                 message = chat_bot(data, address)
                 print('Server: ',message)
                 client_socket.send(message.encode('utf-8'))
-                if data.lower() == 'пока':
-                    print('Connection terminated.')
-                    break
+
 
 except KeyboardInterrupt:
     print('\nServer has been stoped.')
