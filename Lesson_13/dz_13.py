@@ -63,8 +63,8 @@ class SortAlgorithms:
 
 def time_for_sort(func_for_sort, data, iter_sort):
     total_time = 0
-    start = time.perf_counter()
     for i in range(iter_sort):
+        start = time.perf_counter()
         func_for_sort(data)
         proc_time = time.perf_counter() - start
         total_time += proc_time
@@ -74,7 +74,7 @@ def time_for_sort(func_for_sort, data, iter_sort):
 
 
 if __name__ == '__main__':
-    t = time_for_sort(SortAlgorithms.selection_sort, float_list, 10)
+    t = time_for_sort(SortAlgorithms.selection_sort, str_list, 10)
     print(f'Average time for sort: {t}')
 
 
