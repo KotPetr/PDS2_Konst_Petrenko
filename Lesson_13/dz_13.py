@@ -1,10 +1,15 @@
 import random, time
-#from random_word import RandomWords
+from random_word import RandomWords
 
-int_list = [random.randint(1, 1000) for x in range(5000)]
-float_list = [random.uniform(0.1, 100) for x in range(5000)]
-alphabet = ('abcdefghijklmnopqrstuvwxyz')
-str_list = [''.join([alphabet[random.randint(0, 25)] for x in range(5)]) for y in range(5000)]
+r = RandomWords()
+int_list = []
+float_list = []
+str_list = []
+
+for i in range(0, 5000):
+    int_list.append(random.randint(0, 1000))
+    float_list.append(random.uniform(0.1, 100.0))
+    str_list.append(r.get_random_word())
 
 
 class SortAlgorithms:
@@ -74,7 +79,7 @@ def time_for_sort(func_for_sort, data, iter_sort):
 
 
 if __name__ == '__main__':
-    t = time_for_sort(SortAlgorithms.selection_sort, str_list, 10)
+    t = time_for_sort(SortAlgorithms.selection_sort, float_list, 10)
     print(f'Average time for sort: {t}')
 
 
