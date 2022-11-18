@@ -9,6 +9,9 @@ str_list = []
 for i in range(0, 5000):
     int_list.append(random.randint(0, 1000))
     float_list.append(random.uniform(0.1, 100.0))
+
+    # Вікторе, подивіться будь ласка, чому у мене генерація англ. слів працює дуже повільно?
+    # Приблизно 0.5 сек генерується одне слово.
     str_list.append(r.get_random_word())
 
 
