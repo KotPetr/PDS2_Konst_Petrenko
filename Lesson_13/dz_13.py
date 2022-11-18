@@ -42,7 +42,7 @@ class SortAlgorithms:
 
     # Heap Sort Algorithm
     @classmethod
-    def heapify(cls, nums, heap_size, root_index):
+    def __heapify(cls, nums, heap_size, root_index):
 
         largest = root_index
         left_child = (2 * root_index) + 1
@@ -56,17 +56,17 @@ class SortAlgorithms:
 
         if largest != root_index:
             nums[root_index], nums[largest] = nums[largest], nums[root_index]
-            cls.heapify(nums, heap_size, largest)
+            cls.__heapify(nums, heap_size, largest)
 
     @classmethod
     def heap_sort(cls, nums):
         n = len(nums)
         for i in range(n, -1, -1):
-            cls.heapify(nums, n, i)
+            cls.__heapify(nums, n, i)
 
         for i in range(n - 1, 0, -1):
             nums[i], nums[0] = nums[0], nums[i]
-            cls.heapify(nums, i, 0)
+            cls.__heapify(nums, i, 0)
 
 
 def time_for_sort(func_for_sort, data, iter_sort):
