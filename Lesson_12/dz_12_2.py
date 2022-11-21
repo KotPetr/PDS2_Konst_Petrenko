@@ -24,7 +24,7 @@ async def run_server():
                 data = client_socket.recv(1024).decode('utf-8').split()
                 print('Client: ', *data)
                 try:
-                    message = f'Sum of two numbers: {add(data)}, Difference of two numbers {mult(data)}, Multiplication of two numbers {sub(data)}'
+                    message = f'Sum of two numbers: {add(data)}, Difference of two numbers {sub(data)}, Multiplication of two numbers {mult(data)}'
                 except Exception as ex:
                     message = 'Unknown input, please input two integer numbers.'
 
