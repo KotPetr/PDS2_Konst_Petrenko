@@ -26,7 +26,6 @@ try:
 
 except KeyboardInterrupt as ex:
     print('\nServer connection terminated.')
-
-except ConnectionResetError as ex:
+except Exception as ex:
     print(ex)
 
