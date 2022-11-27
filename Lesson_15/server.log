@@ -1,0 +1,34 @@
+2022-11-27 17:56:09,446 :: serverFL :: 13 :: INFO :: Program started.
+2022-11-27 17:56:09,447 :: serverFL :: 6 :: INFO :: Setting host: 127.0.0.1 and port: 12001
+2022-11-27 17:56:09,454 :: serverFL :: 11 :: INFO :: Server is running on 127.0.0.1:12001
+2022-11-27 17:56:17,053 :: serverFL :: 15 :: INFO :: Client connected. Waiting for message.
+2022-11-27 17:56:19,781 :: serverFL :: 19 :: INFO :: Message from client has been recived.
+2022-11-27 17:56:27,592 :: serverFL :: 27 :: INFO :: Message to the client has been send.
+2022-11-27 17:56:27,594 :: serverFL :: 15 :: INFO :: Client connected. Waiting for message.
+2022-11-27 17:56:33,275 :: serverFL :: 19 :: INFO :: Message from client has been recived.
+2022-11-27 17:56:35,624 :: serverFL :: 25 :: WARNING :: Message can not be empty!
+2022-11-27 17:56:41,303 :: serverFL :: 27 :: INFO :: Message to the client has been send.
+2022-11-27 17:56:41,304 :: serverFL :: 15 :: INFO :: Client connected. Waiting for message.
+2022-11-27 17:56:46,006 :: serverFL :: 19 :: INFO :: Message from client has been recived.
+2022-11-27 17:56:48,855 :: serverFL :: 31 :: ERROR :: Server has been stoped.
+2022-11-27 17:56:48,855 :: serverFL :: 36 :: INFO :: Done!
+2022-11-27 17:56:48,855 :: serverFL :: 15 :: INFO :: Program finished.
+
+
+
+2022-11-27 18:08:16,439 :: serverFL :: 13 :: INFO :: Program started.
+2022-11-27 18:08:16,439 :: serverFL :: 6 :: INFO :: Setting host: 127.0.0.1 and port: 12001
+2022-11-27 18:08:16,441 :: serverFL :: 11 :: INFO :: Server is running on 127.0.0.1:12001
+2022-11-27 18:08:59,277 :: serverFL :: 15 :: INFO :: Client connected. Waiting for message.
+2022-11-27 18:09:03,135 :: serverFL :: 19 :: INFO :: Message from client has been recived.
+2022-11-27 18:09:07,135 :: serverFL :: 27 :: INFO :: Message to the client has been send.
+2022-11-27 18:09:07,137 :: serverFL :: 15 :: INFO :: Client connected. Waiting for message.
+2022-11-27 18:09:17,561 :: serverFL :: 19 :: INFO :: Message from client has been recived.
+2022-11-27 18:09:20,082 :: serverFL :: 25 :: WARNING :: Message can not be empty!
+2022-11-27 18:09:22,581 :: serverFL :: 27 :: INFO :: Message to the client has been send.
+2022-11-27 18:09:22,583 :: serverFL :: 15 :: INFO :: Client connected. Waiting for message.
+2022-11-27 18:09:25,348 :: serverFL :: 19 :: INFO :: Message from client has been recived.
+2022-11-27 18:09:27,395 :: serverFL :: 31 :: ERROR :: Server has been stoped.
+2022-11-27 18:09:27,395 :: serverFL :: 36 :: INFO :: Done!
+2022-11-27 18:09:27,395 :: serverFL :: 15 :: INFO :: Program finished.
+
