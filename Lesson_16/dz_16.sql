@@ -1,0 +1,17 @@
+USE pds;
+
+SELECT *
+FROM employees
+ORDER BY 2, 3;
+
+SELECT FIRST_NAME, LAST_NAME, SALARY, SALARY * 0.15 AS Tax
+FROM employees;
+
+SELECT SUM(SALARY) AS TOTAL_SALARY
+FROM employees;
+
+SELECT MAX(SALARY) AS MAX_SALARY, MIN(SALARY) AS MIN_SALARY
+FROM employees;
+
+SELECT ROUND(AVG(SALARY), 2) AS 'Середня з/п', COUNT(*) AS 'Кількість працівників'
+FROM employees
