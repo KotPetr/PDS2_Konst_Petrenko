@@ -42,5 +42,6 @@ def compare_methods():
             print(i)
 
 
-compare_methods()
+if __name__ == '__main__':
+    compare_methods()
 
