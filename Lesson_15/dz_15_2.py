@@ -16,7 +16,7 @@ def test_insert():
 
 def test_append_list():
     t.append_list([1, 8, 10])
-    assert t.is_contains_element(10) == True
+    assert t.is_contains_element(1) and t.is_contains_element(8) and t.is_contains_element(10) == True
 
 def test_get_min_node():
     assert t.get_min_node() == 1
