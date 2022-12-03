@@ -28,5 +28,5 @@ for row in stud_result:
     print(row)
 
 for row in empl_result:
-   print(row)
+    print(row)
 
