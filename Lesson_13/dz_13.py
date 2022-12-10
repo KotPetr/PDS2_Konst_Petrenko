@@ -1,5 +1,5 @@
 import random, time
-from random_word import RandomWords
+from random_words import RandomWords
 
 r = RandomWords()
 int_list = []
@@ -9,10 +9,8 @@ str_list = []
 for i in range(0, 5000):
     int_list.append(random.randint(0, 1000))
     float_list.append(random.uniform(0.1, 100.0))
+    str_list.append(r.random_word())
 
-    # Вікторе, подивіться будь ласка, чому у мене генерація англ. слів працює дуже повільно?
-    # Приблизно 0.5 сек генерується одне слово.
-    str_list.append(r.get_random_word())
 
 
 class SortAlgorithms:
@@ -82,7 +80,7 @@ def time_for_sort(func_for_sort, data, iter_sort):
 
 
 if __name__ == '__main__':
-    t = time_for_sort(SortAlgorithms.selection_sort, float_list, 10)
+    t = time_for_sort(SortAlgorithms.selection_sort, str_list, 10)
     print(f'Average time for sort: {t}')
 
 
