@@ -82,7 +82,7 @@ class Matrix:
         if self.__m != matrix.__n:
             print(f"Incorrect multiplication.\n"
                   f"Number of rows({self.__m}) of the 1st matrice.\n"
-                  f"must be equal number of columns({matrix.__n}) of the 2nd matrice.")
+                  f"must be equal to number of columns({matrix.__n}) of the 2nd matrice.")
 
         else:
             result = [[0] * self.__m for _ in range(matrix.__n)]
