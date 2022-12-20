@@ -79,10 +79,10 @@ class Matrix:
 
 
     def mult_by_matrix(self, matrix):
-        # if self.__m != matrix.__n:
-        #   raise Exception('sfsdfsdfsdf')
-        if not self:
-            pass
+        if self.__m != matrix.__n:
+            print(f"Incorrect multiplication.\n"
+                  f"Number of rows({self.__m}) of the 1st matrice.\n"
+                  f"must be equal number of columns({matrix.__n}) of the 2nd matrice.")
 
         else:
             result = [[0] * self.__m for _ in range(matrix.__n)]
@@ -92,72 +92,67 @@ class Matrix:
                     for k in range(matrix.__m):
                         result[i][j] += self.__matrix_list[i][k] * matrix.__matrix_list[k][j]
                     
-        return Matrix(result)
+            return Matrix(result)
 
 
 
-# A = Matrix([[3, 2],
-#             [2, 1],
-#             [8, -1]])
-# B = Matrix([[1]])
-#
-# print('Adding two matrices.')
-# C = A.add_matrix(B)
-# print(C)
-#
-# print("Subtract matrices.")
-# A = Matrix([[1, 2],
-#            [3, -6],
-#            [2, 0]])
-#
-# B = Matrix([[2, -6, 8],
-#             [3, 0, 5]])
-# C = A.subtract_matrix(B)
-# print(C)
-#
-#
-# n = 4
-# A = Matrix([[3, 2],
-#             [2, 1],
-#             [8, -1]])
-# print(f'Multiplying by number {n}.')
-# A.mult_by_number(n)
-# print(A)
-#
-# print(('Transpose matrice.'))
-# A = Matrix([[5, 0],
-#             [-3, 2],
-#             [7, -1]])
-# A.transpose()
-# print(A)
-print('*******************')
+print('Adding two matrices.')
+A = Matrix([[3, 2],
+            [2, 1],
+            [8, -1]])
+B = Matrix([[1]])
+
+C = A.add_matrix(B)
+print(C)
+
+print("Subtract matrices.")
+A = Matrix([[1, 2],
+           [3, -6],
+           [2, 0]])
+
+B = Matrix([[2, -6, 8],
+            [3, 0, 5]])
+C = A.subtract_matrix(B)
+print(C)
+
+
+print(f'Multiplying by number.')
+n = 4
+A = Matrix([[3, 2],
+            [2, 1],
+            [8, -1]])
+A.mult_by_number(n)
+print(A)
+
+print(('Transpose matrice.'))
+A = Matrix([[5, 0],
+            [-3, 2],
+            [7, -1]])
+A.transpose()
+print(A)
+
 print(f'Multiplying by matrice.')
-D = Matrix([[4, -2],
+C = Matrix([[4, -2],
             [5, 1],
             [3, 0]])
 
-C = Matrix([[3, 5, 0],
+D = Matrix([[3, 5, 0],
            [4, -2, 1]])
 
-DC = D.mult_by_matrix(C)
-print(DC)
+E = Matrix([[2, -5]])
 
 CD = C.mult_by_matrix(D)
 print(CD)
 
-# Multiply Two Matrices
-# 3x3 matrix
-# X = Matrix([[12, 7, 3],
-#             [4, 5, 6],
-#             [7, 8, 9]])
-# # 3x4 matrix
-# Y = Matrix([[5, 8, 1, 2],
-#             [6, 7, 3, 0],
-#             [4, 5, 9, 1]])
-#
-#
-# Z = X.mult_by_matrix(Y)
-# print(Z)
+DC = D.mult_by_matrix(C)
+print(DC)
+
+# Incorrect multiplication
+CE = C.mult_by_matrix(E)
+
+
+
+
 
 
 
