@@ -15,9 +15,11 @@ class HashTable:
     def __str__(self):
         return ''.join(map(str, self.hash_table))
 
+    def __hash_func(self, key):
+        return key % self.size
 
     def add(self, key : int, data):
-        index = key % self.size
+        index = self.__hash_func(key)
         if not self.hash_table[index]:
             self.hash_table[index] = [key, data]
         else:
@@ -25,7 +27,7 @@ class HashTable:
 
 
     def search(self, key):
-        index = key % self.size
+        index = self.__hash_func(key)
         if self.hash_table[index]:
             return self.hash_table[index][self.hash_table[index].index(key) + 1]
         else:
@@ -33,7 +35,7 @@ class HashTable:
 
 
     def remove(self, key: int, data):
-        index = key % self.size
+        index = self.__hash_func(key)
         result = self.search(key)
         if result:
             if data in self.hash_table[index]:
