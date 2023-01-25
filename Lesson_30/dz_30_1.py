@@ -27,19 +27,16 @@ class HashTable:
     def search(self, key):
         index = key % self.size
         if self.hash_table[index]:
-            result = []
-            for i in range(1, len(self.hash_table[index]), 2):
-                result.append(self.hash_table[index][i])
-            return result
+            return self.hash_table[index][self.hash_table[index].index(key) + 1]
         else:
             return None
 
 
-    def remove(self, key : int, data):
+    def remove(self, key: int, data):
         index = key % self.size
         result = self.search(key)
         if result:
-            if data in result:
+            if data in self.hash_table[index]:
                 self.hash_table[index].remove(key)
                 self.hash_table[index].remove(data)
             else:
@@ -48,7 +45,6 @@ class HashTable:
         else:
             error = KeyError(f'There is no key ({key}) in the hash table.')
             raise error
-
 
 
 
@@ -61,13 +57,14 @@ ht.add(22, 'pineapple')
 print(ht)
 print('*'* 30)
 
-print(ht.search(3))   # None
-print(ht.search(22))   # ['grape', 'pineapple']
+print(ht.search(3))    # None
+print(ht.search(22))   # pineapple
+print(ht.search(7))    # cherry
 print('*'* 30)
 
 #ht.remove(3, 'pineapple')   # KeyError
-#ht.remove(22, 'pine')   # ValueError
+#ht.remove(22, 'pine')       # ValueError
 ht.remove(22, 'pineapple')
-
+ht.remove(8, 'pear')
 print(ht)
 
