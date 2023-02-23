@@ -1,0 +1,5 @@
+Ensemble,Base_estimators,Final_estimator,Model_score,Notes
+StackingClassifier,"LogisticRegression, SGDClassifier",DecisionTreeClassifier,0.9590643274853801,lesson
+BaggingClassifier,LogisticRegression,,0.9824561403508771,lesson
+AdaBoostClassifier,DecisionTreeClassifier,,0.9181286549707602,lesson
+XGBClassifier,gblinear,,0.9590643274853801,lesson
